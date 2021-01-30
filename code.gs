@@ -46,8 +46,8 @@ function hashtag_twitterBot() {
         props.setProperty("SINCE_TWITTER_ID", tweets[0]);
         
         for (var i = tweets.length - 1; i >= 0; i--) {
-          twit.retweet(tweets[i]);
-          twit.favorite(tweets[i]);
+          !twit.retweet(tweets[i]);
+          !twit.favorite(tweets[i]);
           /* Wait between 10 seconds and 1 minute */
           Utilities.sleep(Math.floor(Math.random()*50000) + 10000);
         }
